@@ -1,0 +1,46 @@
+.about {
+  background-color: $dark-green;
+  padding: 50px 0;
+}
+.about__card {
+  margin: 20px 30px;
+}
+.about__container {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about__description {
+  max-width: 220px;
+  height: 190px;
+  width: 100%;
+  border: 1px solid $main-black;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: -5px;
+}
+.about__name {
+  font-size: $fs-main;
+  color: $main-black;
+  text-align: center;
+  margin: 10px 0 9px 0;
+}
+.about__title {
+  font-size: $fs-small3;
+  color: $main-black;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+.about__bio {
+  font-size: $fs-small3;
+  color: $main-black;
+  line-height: 20px;
+}
