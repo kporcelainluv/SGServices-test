@@ -6,7 +6,7 @@ import img4 from "../imgs/img-4.png";
 import img5 from "../imgs/img-5.png";
 import img6 from "../imgs/img-6.png";
 
-const buttons = ["ALL", "WEB DESIGN", "GRAPHIC DESIGN", "FLAT DESIGN"];
+const buttons = ["all", "web", "graphic", "flat"];
 
 const projectsList = [
   {
@@ -49,13 +49,19 @@ export const Portfolio = () => {
       </p>
       <div className="portfolio__buttons">
         {buttons.map(button => {
+          const buttonType = button === TYPES.ALL ? button : button + " design";
           return (
             <button
               key={button}
               className="button button--portfolio"
-              onClick={() => setType(button.toLowerCase())}
+              onClick={() => setType(buttonType)}
             >
-              {button}
+              {button.toUpperCase()}
+              {button === TYPES.ALL ? (
+                ""
+              ) : (
+                <span className="portfolio__extra">DESIGN</span>
+              )}
             </button>
           );
         })}
