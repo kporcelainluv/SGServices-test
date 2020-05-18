@@ -1,0 +1,37 @@
+.hero {
+  height: 453px;
+  width: 100%;
+  background: url("../../imgs/hero.png");
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero__heading {
+  color: $white;
+  font-size: 40px;
+  margin: 0 0 40px;
+}
+.hero__heading--bold {
+  font-family: "Lato Bold", "Helvetica", sans-serif;
+  text-align: center;
+}
+.hero__description {
+  color: $white;
+  font-size: $fs-main;
+  line-height: 24px;
+  max-width: 574px;
+  opacity: 0.6;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.hero__icon {
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .hero__heading {
+    font-size: $fs-large;
+  }
+}

@@ -1,5 +1,23 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Lato Light";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/latolight.woff2") format("woff2"),
+    url("../fonts/latolight.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Lato Bold";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/latobold.woff2") format("woff2"),
+    url("../fonts/latobold.woff") format("woff");
+}
+
 body {
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "Lato Light", "Helvetica", sans-serif;
   box-sizing: border-box;
 }
 
