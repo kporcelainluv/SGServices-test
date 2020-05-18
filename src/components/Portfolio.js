@@ -44,11 +44,7 @@ export const Portfolio = () => {
   const projects = filteredProjects(type, projectsList);
   return (
     <section className="portfolio">
-      {/*<h2 className="portfolio__heading">Portfolio</h2>*/}
-      {/*<p className="portfolio__description">*/}
-      {/*  Lorem ipsum dolor sit amet, consectetur adipiscing elit.*/}
-      {/*</p>*/}
-      <ComponentHeading name={"Portfolio"} />
+      <ComponentHeading name={"Portfolio"} color="black" />
       <div className="portfolio__buttons">
         {buttons.map(button => {
           const buttonType = button === TYPES.ALL ? button : button + " design";
