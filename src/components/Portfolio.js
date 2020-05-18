@@ -5,6 +5,7 @@ import img3 from "../imgs/img-3.png";
 import img4 from "../imgs/img-4.png";
 import img5 from "../imgs/img-5.png";
 import img6 from "../imgs/img-6.png";
+import { ComponentHeading } from "./ComponentHeading";
 
 const buttons = ["all", "web", "graphic", "flat"];
 
@@ -43,10 +44,11 @@ export const Portfolio = () => {
   const projects = filteredProjects(type, projectsList);
   return (
     <section className="portfolio">
-      <h2 className="portfolio__heading">Portfolio</h2>
-      <p className="portfolio__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+      {/*<h2 className="portfolio__heading">Portfolio</h2>*/}
+      {/*<p className="portfolio__description">*/}
+      {/*  Lorem ipsum dolor sit amet, consectetur adipiscing elit.*/}
+      {/*</p>*/}
+      <ComponentHeading name={"Portfolio"} />
       <div className="portfolio__buttons">
         {buttons.map(button => {
           const buttonType = button === TYPES.ALL ? button : button + " design";
