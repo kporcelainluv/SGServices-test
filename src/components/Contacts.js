@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { YMaps, Map, Placemark, ZoomControl } from "react-yandex-maps";
 import { ComponentHeading } from "./ComponentHeading";
 import { Element } from "react-scroll";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const points = {
-  center: {
-    name: "Колодезный переулок д.2а",
-    coordinates: [55.79769, 37.69742]
-  },
   subway: {
     name: "метро Сокольники",
     coordinates: [55.78971, 37.6795]
@@ -15,6 +13,10 @@ const points = {
   square: {
     name: "Преображенская площадь",
     coordinates: [55.79513, 37.71201]
+  },
+  center: {
+    name: "Колодезный переулок д.2а",
+    coordinates: [55.79769, 37.69742]
   }
 };
 
@@ -98,6 +100,10 @@ export const Contacts = () => {
 const MapBlock = () => {
   return (
     <div className="contacts__map-container">
+      <span className="contacts__address">
+        <FontAwesomeIcon icon={faMapMarkerAlt} size="xs" /> Москва, Колодезный
+        переулок д.2а
+      </span>
       <YMaps modules={["geocode"]}>
         <Map
           className="contacts__map"

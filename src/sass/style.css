@@ -624,7 +624,10 @@ body {
   height: 265px;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+}
+
+.contacts__address {
+  margin-bottom: 5px;
 }
 
 .contacts__map {
