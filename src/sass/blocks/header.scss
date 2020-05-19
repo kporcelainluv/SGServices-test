@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  word-break: break-all;
 }
 .header__container {
   display: flex;
@@ -46,6 +47,9 @@
 .hidden {
   display: none;
 }
+.header__navigation li {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .header {
     flex-direction: row-reverse;
@@ -63,7 +67,9 @@
     list-style: none;
     padding: 0;
     flex-direction: row;
+    word-break: keep-all;
   }
+
   .header__menu {
     display: none;
   }

@@ -12,12 +12,7 @@ import { ComponentHeading } from "./ComponentHeading";
 const buttons = ["all", "web", "graphic", "flat"];
 
 const projectsList = [
-  {
-    id: "1",
-    name: "project 1",
-    img: img1,
-    type: "web design"
-  },
+  { id: "1", name: "project 1", img: img1, type: "web design" },
   { id: "2", name: "project 2", img: img2, type: "graphic design" },
   { id: "3", name: "project 3", img: img3, type: "flat design" },
   { id: "4", name: "project 4", img: img4, type: "web design" },

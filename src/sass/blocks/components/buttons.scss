@@ -1,7 +1,8 @@
 .button {
   background-color: $light-green;
   font-family: "Lato Bold", "Helvetica", sans-serif;
-  height: 37px;
+  min-height: 37px;
+  height: 100%;
   border: none;
   font-size: $fs-small;
   letter-spacing: 1px;
@@ -16,7 +17,7 @@
   background-color: $dark-green;
 }
 .button--portfolio {
-  margin: 0 10px;
+  margin: 0 10px 10px;
   padding: 0 10px;
 }
 .button--about {
@@ -28,31 +29,23 @@
   display: flex;
   align-items: center;
   font-family: "Lato Bold", "Helvetica", sans-serif;
-
   font-size: $fs-small;
 }
 
 .header_button {
-  margin-bottom: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
   width: 100%;
-  justify-content: center;
   border-bottom: 1px solid grey;
-}
-.header_button a {
   color: $main-black;
   font-size: $fs-small;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
   text-decoration: none;
-  width: 100%;
-  height: 100%;
   align-items: center;
   display: flex;
-  padding: 0 20px;
   justify-content: center;
 }
+
 .header_button:hover,
 .header_button a:hover {
   background-color: $light-green;
@@ -62,6 +55,7 @@
 @media (min-width: 768px) {
   .header_button {
     border-bottom: none;
-    padding: 0;
+    padding: 0 20px;
+    margin: 0 10px;
   }
 }

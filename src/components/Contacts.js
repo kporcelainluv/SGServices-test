@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { YMaps, Map, Placemark, ZoomControl } from "react-yandex-maps";
-import { ComponentHeading } from "./ComponentHeading";
 import { Element } from "react-scroll";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt as PointIcon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { ComponentHeading } from "./ComponentHeading";
+const CENTER = [55.79364490310138, 37.70643920481206];
+const ZOOM = 12;
 
 const points = {
   subway: {
@@ -21,9 +24,7 @@ const points = {
 };
 
 export const Contacts = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   return (
     <Element name="contact">
       <section className="contacts">
@@ -38,9 +39,9 @@ export const Contacts = () => {
                 <input
                   type="text"
                   id="name"
-                  value={name}
+                  value={form.name}
                   className="contacts__input"
-                  onChange={e => setName(e.target.value)}
+                  onChange={e => setForm({ ...form, name: e.target.value })}
                 />
               </div>
               <div className="contacts__wrap">
@@ -50,9 +51,9 @@ export const Contacts = () => {
                 <input
                   type="email"
                   id="email"
-                  value={email}
+                  value={form.email}
                   className="contacts__input"
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={e => setForm({ ...form, email: e.target.value })}
                 />
               </div>
             </div>
@@ -69,8 +70,8 @@ export const Contacts = () => {
                   name="about"
                   id="about"
                   className="contacts__textarea"
-                  value={message}
-                  onChange={e => setMessage(e.target.value)}
+                  value={form.message}
+                  onChange={e => setForm({ ...form, message: e.target.value })}
                 />
               </div>
             </div>
@@ -83,9 +84,7 @@ export const Contacts = () => {
                 onClick={e => {
                   e.preventDefault();
                   alert("Your message has been sent!");
-                  setName("");
-                  setEmail("");
-                  setMessage("");
+                  setForm({ name: "", email: "", message: "" });
                 }}
               />
             </div>
@@ -101,15 +100,15 @@ const MapBlock = () => {
   return (
     <div className="contacts__map-container">
       <span className="contacts__address">
-        <FontAwesomeIcon icon={faMapMarkerAlt} size="xs" /> Москва, Колодезный
+        <FontAwesomeIcon icon={PointIcon} size="xs" /> Москва, Колодезный
         переулок д.2а
       </span>
       <YMaps modules={["geocode"]}>
         <Map
           className="contacts__map"
           defaultState={{
-            center: [55.79364490310138, 37.70643920481206],
-            zoom: 12
+            center: CENTER,
+            zoom: ZOOM
           }}
         >
           <ZoomControl options={{ float: "right" }} />

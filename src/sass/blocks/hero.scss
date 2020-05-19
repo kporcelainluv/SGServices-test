@@ -1,6 +1,7 @@
 .hero {
-  height: 453px;
-  width: 100%;
+  min-height: 453px;
+  height: 100%;
+  padding: 20px 0;
   background: url("../../imgs/hero.png");
   object-fit: cover;
   display: flex;

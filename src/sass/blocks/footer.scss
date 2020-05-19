@@ -1,11 +1,14 @@
 .footer {
-  height: 93px;
+  min-height: 93px;
   background-color: #2d3e50;
+  height: 100%;
 }
 .footer-wrap {
   max-width: 300px;
   width: 100%;
+  min-height: 93px;
   height: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +23,11 @@
 .footer-button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  color: $light-green;
+}
+.footer-button:hover {
+  color: $dark-green;
 }
 @media (min-width: 768px) {
   .footer-wrap {
