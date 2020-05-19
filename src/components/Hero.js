@@ -17,8 +17,9 @@ export const Hero = () => {
         <span className="visually-hidden"> icon down</span>
         <FontAwesomeIcon
           icon={faChevronCircleDown}
-          style={{ color: "#ffffff" }}
+          style={{ color: "#1bbc9b" }}
           size="3x"
+          fill={"white"}
         />
       </button>
     </div>
