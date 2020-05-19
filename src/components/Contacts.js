@@ -45,7 +45,7 @@ export const Contacts = () => {
                 />
               </div>
               <div className="contacts__wrap">
-                <label htmlFor="name" className="contacts__label">
+                <label htmlFor="email" className="contacts__label">
                   Email
                 </label>
                 <input
@@ -61,7 +61,7 @@ export const Contacts = () => {
             <div className="contacts__textarea-container">
               <div className="contacts__textarea-wrap">
                 <label
-                  htmlFor="name"
+                  htmlFor="about"
                   className="contacts__label contacts__label--textarea"
                 >
                   Your message
