@@ -20,7 +20,7 @@
 }
 .hero__description {
   color: $white;
-  font-size: $fs-main;
+  font-size: $fs-400;
   line-height: 24px;
   max-width: 574px;
   opacity: 0.6;
@@ -36,7 +36,7 @@
 }
 @media (min-width: $tablet-width) {
   .hero__heading {
-    font-size: $fs-large;
+    font-size: $fs-700;
   }
 }
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
