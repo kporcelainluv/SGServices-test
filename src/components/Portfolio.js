@@ -73,7 +73,7 @@ export const Portfolio = () => {
             return (
               <div className="portfolio__project" key={p.id}>
                 <span className="visually-hidden">{p.name}</span>
-                <img src={p.img} alt={p.img} height="180px" width="180px" />
+                <img src={p.img} alt={p.name} height="180px" width="180px" />
               </div>
             );
           })}

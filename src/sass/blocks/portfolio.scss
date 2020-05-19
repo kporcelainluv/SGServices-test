@@ -19,6 +19,18 @@
 .portfolio__project {
   margin: 10px 0;
   padding: 10px;
+  position: relative;
+}
+.portfolio__project:hover:after {
+  content: "";
+  height: 180px;
+  width: 180px;
+  background-color: $light-green;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  opacity: 0.6;
 }
 .portfolio__extra {
   display: none;
