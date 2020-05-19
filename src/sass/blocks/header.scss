@@ -50,7 +50,7 @@
 .header__navigation li {
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .header {
     flex-direction: row-reverse;
     height: 100px;
@@ -79,6 +79,4 @@
   .hidden {
     display: flex;
   }
-}
-@media (min-width: 768px) {
 }

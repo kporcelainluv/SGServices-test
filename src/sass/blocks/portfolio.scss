@@ -28,8 +28,9 @@
   border-radius: 23px;
   background-color: $main-black;
   position: absolute;
-  top: 64px;
-  left: 98px;
+
+  top: 76px;
+  left: 80px;
   z-index: 3;
   opacity: 0.5;
 }
@@ -40,8 +41,9 @@
   background: url("../../imgs/icons/search.svg");
   filter: brightness(0) invert(1);
   position: absolute;
-  top: 76px;
-  left: 110px;
+
+  top: 89px;
+  left: 90px;
   z-index: 4;
 }
 
@@ -56,14 +58,14 @@
   background-color: $light-green;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 30px;
+  top: 10px;
+  left: 10px;
   opacity: 0.6;
 }
 .portfolio__extra {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .portfolio__project {
     padding: 0 30px 30px;
   }
@@ -71,8 +73,20 @@
     display: inline-flex;
     padding-left: 5px;
   }
+  .portfolio__project-wrap:hover:before {
+    top: 0;
+    left: 30px;
+  }
+  .portfolio__project:hover:after {
+    top: 64px;
+    left: 98px;
+  }
+  .portfolio__project:hover:before {
+    top: 76px;
+    left: 110px;
+  }
 }
-@media (min-width: 1200px) {
+@media (min-width: $desktop-width) {
   .portfolio__projects {
     max-width: 1150px;
   }

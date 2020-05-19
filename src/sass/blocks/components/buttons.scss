@@ -52,7 +52,7 @@
   color: $white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .header_button {
     border-bottom: none;
     padding: 0 20px;

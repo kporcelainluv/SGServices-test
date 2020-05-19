@@ -2,7 +2,7 @@
   min-height: 453px;
   height: 100%;
   padding: 20px 0;
-  background: url("../../imgs/hero.png");
+  background: url("../../imgs/hero-min.png");
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -34,8 +34,13 @@
 .hero__icon:hover {
   color: $dark-green;
 }
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .hero__heading {
     font-size: $fs-large;
+  }
+}
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .hero {
+    background-image: url("../../imgs/hero.png");
   }
 }

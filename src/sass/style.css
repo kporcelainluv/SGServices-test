@@ -372,7 +372,7 @@ body {
   min-height: 453px;
   height: 100%;
   padding: 20px 0;
-  background: url("../../imgs/hero.png");
+  background: url("../../imgs/hero-min.png");
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -415,6 +415,11 @@ body {
     font-size: 52px;
   }
 }
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .hero {
+    background-image: url("../../imgs/hero.png");
+  }
+}
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -447,8 +452,8 @@ body {
   border-radius: 23px;
   background-color: #444444;
   position: absolute;
-  top: 64px;
-  left: 98px;
+  top: 76px;
+  left: 80px;
   z-index: 3;
   opacity: 0.5;
 }
@@ -460,8 +465,8 @@ body {
   background: url("../../imgs/icons/search.svg");
   filter: brightness(0) invert(1);
   position: absolute;
-  top: 76px;
-  left: 110px;
+  top: 89px;
+  left: 90px;
   z-index: 4;
 }
 
@@ -477,8 +482,8 @@ body {
   background-color: #1bbc9b;
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 30px;
+  top: 10px;
+  left: 10px;
   opacity: 0.6;
 }
 
@@ -494,6 +499,21 @@ body {
   .portfolio__extra {
     display: inline-flex;
     padding-left: 5px;
+  }
+
+  .portfolio__project-wrap:hover:before {
+    top: 0;
+    left: 30px;
+  }
+
+  .portfolio__project:hover:after {
+    top: 64px;
+    left: 98px;
+  }
+
+  .portfolio__project:hover:before {
+    top: 76px;
+    left: 110px;
   }
 }
 @media (min-width: 1200px) {

@@ -29,7 +29,7 @@
 .footer-button:hover {
   color: $dark-green;
 }
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .footer-wrap {
     max-width: 90%;
     margin: 0 auto;

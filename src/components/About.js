@@ -10,8 +10,11 @@ import { Element } from "react-scroll";
 
 import { ComponentHeading } from "./ComponentHeading";
 import ava1 from "../imgs/ava-1.png";
+import ava1webp from "../imgs/webp/ava-1.webp";
 import ava2 from "../imgs/ava-2.png";
+import ava2webp from "../imgs/webp/ava-2.webp";
 import ava3 from "../imgs/ava-3.png";
+import ava3webp from "../imgs/webp/ava-3.webp";
 
 const employees = [
   {
@@ -19,7 +22,12 @@ const employees = [
     name: "Melannie Doe",
     title: "project manager",
     about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: ava1
+    img: ava1,
+    webp: ava1webp,
+    facebook: "https://www.facebook.com/",
+    twitter: "http://twitter.com/",
+    google_plus: "https://ru.wikipedia.org/wiki/Google%2B",
+    website: "https://meduza.io/"
   },
   {
     id: "22",
@@ -27,7 +35,12 @@ const employees = [
     title: "graphic designer",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: ava3
+    img: ava3,
+    webp: ava3webp,
+    facebook: "https://www.facebook.com/",
+    twitter: "http://twitter.com/",
+    google_plus: "https://ru.wikipedia.org/wiki/Google%2B",
+    website: "https://meduza.io/"
   },
   {
     id: "23",
@@ -35,6 +48,7 @@ const employees = [
     title: "web designer",
     about: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamc.",
     img: ava2,
+    webp: ava2webp,
     facebook: "https://www.facebook.com/",
     twitter: "http://twitter.com/",
     google_plus: "https://ru.wikipedia.org/wiki/Google%2B",
@@ -66,13 +80,16 @@ export const About = () => {
 const AboutCard = ({ employee }) => {
   return (
     <div className="about__card">
-      <img
-        src={employee.img}
-        alt={employee.name + " image"}
-        height="220px"
-        width="220px"
-        className="about__img"
-      />
+      <picture>
+        <source type="image/webp" srcSet={employee.webp} />
+        <img
+          src={employee.img}
+          alt={employee.name + " image"}
+          height="220px"
+          width="220px"
+          className="about__img"
+        />
+      </picture>
       <div className="about__socials">
         {socials.map(s => {
           return (
