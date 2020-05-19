@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollableAnchor from "react-scrollable-anchor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -7,6 +6,7 @@ import {
   faTwitter,
   faGooglePlusG
 } from "@fortawesome/free-brands-svg-icons";
+import { Element } from "react-scroll";
 
 import { ComponentHeading } from "./ComponentHeading";
 import ava1 from "../imgs/ava-1.png";
@@ -51,7 +51,7 @@ const socials = [
 
 export const About = () => {
   return (
-    <ScrollableAnchor id={"about"}>
+    <Element name={"about"}>
       <section className="about">
         <ComponentHeading name={"About Us"} color="white" />
         <div className="about__container">
@@ -60,7 +60,7 @@ export const About = () => {
           })}
         </div>
       </section>
-    </ScrollableAnchor>
+    </Element>
   );
 };
 const AboutCard = ({ employee }) => {
@@ -76,7 +76,7 @@ const AboutCard = ({ employee }) => {
       <div className="about__socials">
         {socials.map(s => {
           return (
-            <a href={employee[s.name]} className="about__links">
+            <a key={s.name} href={employee[s.name]} className="about__links">
               <span className="visually-hidden">{s.name}</span>
               <FontAwesomeIcon icon={s.icon} size="1x" />
             </a>

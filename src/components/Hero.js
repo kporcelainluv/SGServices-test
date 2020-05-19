@@ -4,7 +4,7 @@ import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 export const Hero = () => {
   return (
-    <div className="hero">
+    <section className="hero">
       <h2 className="hero__heading">
         We Build <span className="hero__heading--bold">Brand</span>
       </h2>
@@ -19,6 +19,6 @@ export const Hero = () => {
         <span className="visually-hidden"> icon down</span>
         <FontAwesomeIcon icon={faChevronCircleDown} size="3x" />
       </a>
-    </div>
+    </section>
   );
 };

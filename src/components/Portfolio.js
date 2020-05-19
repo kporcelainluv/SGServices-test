@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ScrollableAnchor from "react-scrollable-anchor";
+import { Element } from "react-scroll";
 
 import img1 from "../imgs/img-1.png";
 import img2 from "../imgs/img-2.png";
@@ -45,7 +45,7 @@ export const Portfolio = () => {
   const [type, setType] = useState(TYPES.ALL);
   const projects = filteredProjects(type, projectsList);
   return (
-    <ScrollableAnchor id={"portfolio"}>
+    <Element name={"portfolio"}>
       <section className="portfolio">
         <ComponentHeading name={"Portfolio"} color="black" />
         <div className="portfolio__buttons">
@@ -79,6 +79,6 @@ export const Portfolio = () => {
           })}
         </div>
       </section>
-    </ScrollableAnchor>
+    </Element>
   );
 };

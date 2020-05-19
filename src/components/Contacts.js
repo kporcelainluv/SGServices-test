@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ScrollableAnchor from "react-scrollable-anchor";
 import { YMaps, Map, Placemark, ZoomControl } from "react-yandex-maps";
 import { ComponentHeading } from "./ComponentHeading";
+import { Element } from "react-scroll";
 
 const points = {
   center: {
@@ -23,7 +23,7 @@ export const Contacts = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   return (
-    <ScrollableAnchor id={"contact"}>
+    <Element name="contact">
       <section className="contacts">
         <ComponentHeading name="Contact Us" color="black" />
         <div className="contacts__container">
@@ -91,7 +91,7 @@ export const Contacts = () => {
           <MapBlock />
         </div>
       </section>
-    </ScrollableAnchor>
+    </Element>
   );
 };
 

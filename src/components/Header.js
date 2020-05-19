@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../imgs/b-logo.png";
-import * as Scroll from 'react-scroll';
+import { Link } from "react-scroll";
 
 const buttons = ["HOME", "PORTFOLIO", "ABOUT", "CONTACT"];
 export const Header = () => {
@@ -18,7 +18,16 @@ export const Header = () => {
           {buttons.map(b => {
             return (
               <li key={b} className="button header_button">
-                <a href={`#${b.toLowerCase()}`}>{b}</a>
+                <Link
+                  activeClass="active"
+                  to={b.toLowerCase()}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  {b}
+                </Link>
               </li>
             );
           })}
@@ -41,7 +50,7 @@ export const Header = () => {
           <FontAwesomeIcon
             icon={faBars}
             style={{ color: "#444444" }}
-            size="1.5x"
+            size="sm"
           />
         </button>
       </div>
