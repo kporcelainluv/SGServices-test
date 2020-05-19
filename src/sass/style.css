@@ -441,6 +441,36 @@ body {
 
 .portfolio__project:hover:after {
   content: "";
+  width: 43px;
+  height: 45px;
+  border-radius: 23px;
+  background-color: #444444;
+  position: absolute;
+  top: 64px;
+  left: 98px;
+  z-index: 3;
+  opacity: 0.5;
+}
+
+.portfolio__project:hover:before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  background: url("../../imgs/icons/search.svg");
+  filter: brightness(0) invert(1);
+  position: absolute;
+  top: 76px;
+  left: 110px;
+  z-index: 4;
+}
+
+.portfolio__project-wrap {
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio__project-wrap:hover:before {
+  content: "";
   height: 180px;
   width: 180px;
   background-color: #1bbc9b;
