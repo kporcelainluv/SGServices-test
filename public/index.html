@@ -15,5 +15,15 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="picturefill.min.js"></script>
+    <script src="modernizr-custom.js"></script>
+    <script>
+      Modernizr.on("webp", function(result) {
+        if (result) {
+          // console.log("supported");
+        } else {
+          // console.log("not-supported");
+        }
+      });
+    </script>
   </body>
 </html>

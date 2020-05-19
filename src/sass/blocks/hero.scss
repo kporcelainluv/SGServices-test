@@ -2,12 +2,17 @@
   min-height: 453px;
   height: 100%;
   padding: 20px 0;
-  background: url("../../imgs/hero-min.png");
   object-fit: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.no-webp .hero {
+  background: url("../../imgs/hero-min.png");
+}
+.webp .hero {
+  background: url("../../imgs/webp/hero-min.webp");
 }
 .hero__heading {
   color: $white;
