@@ -401,8 +401,7 @@ body {
 }
 
 .hero__icon {
-  border: none;
-  background-color: transparent;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -818,6 +817,15 @@ body {
 
 .button--about {
   width: 113px;
+}
+
+.button--hero {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-family: "Lato Bold", "Helvetica", sans-serif;
+  font-size: 13px;
 }
 
 .header_button {

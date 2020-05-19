@@ -17,6 +17,15 @@
 .button--about {
   width: 113px;
 }
+.button--hero {
+  text-decoration: none;
+  color: $white;
+  display: flex;
+  align-items: center;
+  font-family: "Lato Bold", "Helvetica", sans-serif;
+
+  font-size: $fs-small;
+}
 
 .header_button {
   margin-bottom: 0;

@@ -12,8 +12,10 @@ export const Hero = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <button className="button">LEARN MORE</button>
-      <button className="hero__icon">
+      <a className="button button--hero" href="#portfolio">
+        LEARN MORE
+      </a>
+      <a className="hero__icon" href="#portfolio">
         <span className="visually-hidden"> icon down</span>
         <FontAwesomeIcon
           icon={faChevronCircleDown}
@@ -21,7 +23,7 @@ export const Hero = () => {
           size="3x"
           fill={"white"}
         />
-      </button>
+      </a>
     </div>
   );
 };
