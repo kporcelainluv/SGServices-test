@@ -661,6 +661,16 @@ body {
   border: 2px solid #bec3c7;
 }
 
+.contacts__input:hover {
+  background-color: #bec3c7;
+  opacity: 0.5;
+}
+
+.contacts__input:focus {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
 .contacts__label {
   color: #444444;
   font-size: 16px;
@@ -712,6 +722,16 @@ body {
   font-size: 14px;
   color: #999999;
   border: 2px solid #bec3c7;
+}
+
+.contacts__textarea:hover {
+  background-color: #bec3c7;
+  opacity: 0.5;
+}
+
+.contacts__textarea:focus {
+  background-color: #ffffff;
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -991,8 +1011,7 @@ body {
 @media (min-width: 768px) {
   .header_button {
     border-bottom: none;
-    padding: 0 20px;
-    margin: 0 10px;
+    margin: 0 20px;
   }
 }
 .heading {
