@@ -4,6 +4,7 @@
 }
 .about__card {
   margin: 20px 30px;
+  position: relative;
 }
 .about__container {
   display: flex;
@@ -43,4 +44,39 @@
   font-size: $fs-small3;
   color: $main-black;
   line-height: 20px;
+}
+.about__socials {
+  display: flex;
+  padding: 20px 0;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
+}
+.about__socials:hover {
+  display: flex;
+}
+.about__links {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.about__img:hover + .about__socials {
+  display: flex;
+}
+
+@media (min-width: 1200px) {
+  .about__socials {
+    display: none;
+    width: 180px;
+    height: 48px;
+    padding: 0;
+    background-color: rgba(22, 160, 134, 0.5);
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+  }
 }
