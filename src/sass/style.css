@@ -552,7 +552,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 16px;
   box-sizing: border-box;
   margin-top: -5px;
 }
@@ -576,6 +576,7 @@ body {
   font-size: 14px;
   color: #444444;
   line-height: 20px;
+  margin-top: 9px;
 }
 
 .about__socials {
@@ -603,6 +604,7 @@ body {
 
 .about__img:hover + .about__socials {
   display: flex;
+  z-index: 7;
 }
 
 @media (min-width: 1200px) {
@@ -664,13 +666,11 @@ body {
 }
 
 .contacts__input:hover {
-  background-color: #bec3c7;
-  opacity: 0.5;
+  border: 1px solid #1bbc9b;
 }
 
 .contacts__input:focus {
-  background-color: #ffffff;
-  opacity: 1;
+  border: 1px solid #1bbc9b;
 }
 
 .contacts__label {
@@ -727,13 +727,11 @@ body {
 }
 
 .contacts__textarea:hover {
-  background-color: #bec3c7;
-  opacity: 0.5;
+  border: 1px solid #1bbc9b;
 }
 
 .contacts__textarea:focus {
-  background-color: #ffffff;
-  opacity: 1;
+  border: 1px solid #1bbc9b;
 }
 
 @media (min-width: 768px) {

@@ -80,14 +80,13 @@ export const About = () => {
 const AboutCard = ({ employee }) => {
   return (
     <div className="about__card">
-      <picture>
+      <picture className="about__img">
         <source type="image/webp" srcSet={employee.webp} />
         <img
           src={employee.img}
           alt={employee.name + " image"}
           height="220px"
           width="220px"
-          className="about__img"
         />
       </picture>
       <div className="about__socials">

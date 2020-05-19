@@ -37,12 +37,10 @@
   border: 2px solid $grey2;
 }
 .contacts__input:hover {
-  background-color: $grey2;
-  opacity: 0.5;
+  border: 1px solid $light-green;
 }
 .contacts__input:focus {
-  background-color: $white;
-  opacity: 1;
+  border: 1px solid $light-green;
 }
 .contacts__label {
   color: $main-black;
@@ -91,12 +89,10 @@
   border: 2px solid $grey2;
 }
 .contacts__textarea:hover {
-  background-color: $grey2;
-  opacity: 0.5;
+  border: 1px solid $light-green;
 }
 .contacts__textarea:focus {
-  background-color: $white;
-  opacity: 1;
+  border: 1px solid $light-green;
 }
 @media (min-width: $tablet-width) {
   .contacts__input {
