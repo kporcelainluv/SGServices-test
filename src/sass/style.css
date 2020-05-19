@@ -415,11 +415,6 @@ body {
     font-size: 52px;
   }
 }
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .hero {
-    background-image: url("../../imgs/hero.png");
-  }
-}
 .portfolio {
   display: flex;
   flex-direction: column;

@@ -39,8 +39,3 @@
     font-size: $fs-700;
   }
 }
-@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .hero {
-    background-image: url("../../imgs/hero.png");
-  }
-}
