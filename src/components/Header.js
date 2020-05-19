@@ -17,7 +17,7 @@ export const Header = () => {
           {buttons.map(b => {
             return (
               <li key={b} className="button header_button">
-                <a href="#">{b}</a>
+                <a href={`#${b.toLowerCase()}`}>{b}</a>
               </li>
             );
           })}

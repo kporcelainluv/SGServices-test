@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ScrollableAnchor from "react-scrollable-anchor";
+
 import img1 from "../imgs/img-1.png";
 import img2 from "../imgs/img-2.png";
 import img3 from "../imgs/img-3.png";
@@ -43,37 +45,40 @@ export const Portfolio = () => {
   const [type, setType] = useState(TYPES.ALL);
   const projects = filteredProjects(type, projectsList);
   return (
-    <section className="portfolio">
-      <ComponentHeading name={"Portfolio"} color="black" />
-      <div className="portfolio__buttons">
-        {buttons.map(button => {
-          const buttonType = button === TYPES.ALL ? button : button + " design";
-          return (
-            <button
-              key={button}
-              className="button button--portfolio"
-              onClick={() => setType(buttonType)}
-            >
-              {button.toUpperCase()}
-              {button === TYPES.ALL ? (
-                ""
-              ) : (
-                <span className="portfolio__extra">DESIGN</span>
-              )}
-            </button>
-          );
-        })}
-      </div>
-      <div className="portfolio__projects">
-        {projects.map(p => {
-          return (
-            <div className="portfolio__project" key={p.id}>
-              <span className="visually-hidden">{p.name}</span>
-              <img src={p.img} alt={p.img} height="180px" width="180px" />
-            </div>
-          );
-        })}
-      </div>
-    </section>
+    <ScrollableAnchor id={"portfolio"}>
+      <section className="portfolio">
+        <ComponentHeading name={"Portfolio"} color="black" />
+        <div className="portfolio__buttons">
+          {buttons.map(button => {
+            const buttonType =
+              button === TYPES.ALL ? button : button + " design";
+            return (
+              <button
+                key={button}
+                className="button button--portfolio"
+                onClick={() => setType(buttonType)}
+              >
+                {button.toUpperCase()}
+                {button === TYPES.ALL ? (
+                  ""
+                ) : (
+                  <span className="portfolio__extra">DESIGN</span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+        <div className="portfolio__projects">
+          {projects.map(p => {
+            return (
+              <div className="portfolio__project" key={p.id}>
+                <span className="visually-hidden">{p.name}</span>
+                <img src={p.img} alt={p.img} height="180px" width="180px" />
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </ScrollableAnchor>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ScrollableAnchor from "react-scrollable-anchor";
 import { YMaps, Map, Placemark, ZoomControl } from "react-yandex-maps";
 import { ComponentHeading } from "./ComponentHeading";
 
@@ -22,67 +23,69 @@ export const Contacts = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   return (
-    <section className="contacts">
-      <ComponentHeading name="Contact Us" color="black" />
-      <div className="contacts__container">
-        <form className="contacts__form">
-          <div className="contacts__inputs">
-            <div className="contacts__wrap">
-              <label htmlFor="name" className="contacts__label">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                className="contacts__input"
-                onChange={e => setName(e.target.value)}
-              />
+    <ScrollableAnchor id={"contact"}>
+      <section className="contacts">
+        <ComponentHeading name="Contact Us" color="black" />
+        <div className="contacts__container">
+          <form className="contacts__form">
+            <div className="contacts__inputs">
+              <div className="contacts__wrap">
+                <label htmlFor="name" className="contacts__label">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  className="contacts__input"
+                  onChange={e => setName(e.target.value)}
+                />
+              </div>
+              <div className="contacts__wrap">
+                <label htmlFor="name" className="contacts__label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  className="contacts__input"
+                  onChange={e => setEmail(e.target.value)}
+                />
+              </div>
             </div>
-            <div className="contacts__wrap">
-              <label htmlFor="name" className="contacts__label">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                className="contacts__input"
-                onChange={e => setEmail(e.target.value)}
-              />
-            </div>
-          </div>
 
-          <div className="contacts__textarea-container">
-            <div className="contacts__textarea-wrap">
-              <label
-                htmlFor="name"
-                className="contacts__label contacts__label--textarea"
-              >
-                Your message
-              </label>
-              <textarea
-                name="about"
-                id="about"
-                className="contacts__textarea"
-                placeholder={message}
-                onChange={e => setMessage(e.target.value)}
+            <div className="contacts__textarea-container">
+              <div className="contacts__textarea-wrap">
+                <label
+                  htmlFor="name"
+                  className="contacts__label contacts__label--textarea"
+                >
+                  Your message
+                </label>
+                <textarea
+                  name="about"
+                  id="about"
+                  className="contacts__textarea"
+                  placeholder={message}
+                  onChange={e => setMessage(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="contacts__submit">
+              <input
+                type="submit"
+                className="button button--about"
+                value="SUBMIT"
+                onClick={e => e.preventDefault()}
               />
             </div>
-          </div>
-
-          <div className="contacts__submit">
-            <input
-              type="submit"
-              className="button button--about"
-              value="SUBMIT"
-              onClick={e => e.preventDefault()}
-            />
-          </div>
-        </form>
-        <MapBlock />
-      </div>
-    </section>
+          </form>
+          <MapBlock />
+        </div>
+      </section>
+    </ScrollableAnchor>
   );
 };
 
