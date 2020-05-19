@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../imgs/b-logo.png";
+import * as Scroll from 'react-scroll';
 
 const buttons = ["HOME", "PORTFOLIO", "ABOUT", "CONTACT"];
 export const Header = () => {
