@@ -9,6 +9,11 @@
   text-align: center;
   padding: 0 30px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: $dark-green;
 }
 .button--portfolio {
   margin: 0 10px;

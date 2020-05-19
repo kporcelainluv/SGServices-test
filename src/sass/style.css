@@ -402,6 +402,11 @@ body {
 
 .hero__icon {
   text-decoration: none;
+  color: #1bbc9b;
+}
+
+.hero__icon:hover {
+  color: #16a086;
 }
 
 @media (min-width: 768px) {
@@ -639,7 +644,7 @@ body {
 }
 @media (min-width: 1200px) {
   .contacts__input {
-    width: 220px;
+    width: 225px;
     height: 47px;
   }
 
@@ -808,6 +813,12 @@ body {
   text-align: center;
   padding: 0 30px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #16a086;
 }
 
 .button--portfolio {

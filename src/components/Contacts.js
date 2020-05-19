@@ -67,7 +67,7 @@ export const Contacts = () => {
                   name="about"
                   id="about"
                   className="contacts__textarea"
-                  placeholder={message}
+                  value={message}
                   onChange={e => setMessage(e.target.value)}
                 />
               </div>
@@ -78,7 +78,13 @@ export const Contacts = () => {
                 type="submit"
                 className="button button--about"
                 value="SUBMIT"
-                onClick={e => e.preventDefault()}
+                onClick={e => {
+                  e.preventDefault();
+                  alert("Your message has been sent!");
+                  setName("");
+                  setEmail("");
+                  setMessage("");
+                }}
               />
             </div>
           </form>

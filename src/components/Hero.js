@@ -17,12 +17,7 @@ export const Hero = () => {
       </a>
       <a className="hero__icon" href="#portfolio">
         <span className="visually-hidden"> icon down</span>
-        <FontAwesomeIcon
-          icon={faChevronCircleDown}
-          style={{ color: "#1bbc9b" }}
-          size="3x"
-          fill={"white"}
-        />
+        <FontAwesomeIcon icon={faChevronCircleDown} size="3x" />
       </a>
     </div>
   );

@@ -28,6 +28,10 @@
 }
 .hero__icon {
   text-decoration: none;
+  color: $light-green;
+}
+.hero__icon:hover {
+  color: $dark-green;
 }
 @media (min-width: 768px) {
   .hero__heading {
