@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <section className="hero">
       <h2 className="hero__heading">
-        We Build <span className="hero__heading--bold">Brand</span>
+        We Build <span className="hero__heading-bold">Brand</span>
       </h2>
       <p className="hero__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
