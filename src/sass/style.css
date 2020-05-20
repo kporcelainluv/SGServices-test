@@ -816,12 +816,11 @@ body {
 }
 
 .footer-wrap {
-  max-width: 300px;
-  width: 100%;
+  justify-content: space-around;
+  max-width: 100%;
   min-height: 93px;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
@@ -846,6 +845,7 @@ body {
 
 @media (min-width: 768px) {
   .footer-wrap {
+    justify-content: space-between;
     max-width: 90%;
     margin: 0 auto;
   }
